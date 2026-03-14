@@ -18,7 +18,16 @@
                 </div>
             </div>
 
+            <div class="hidden sm:flex sm:items-center sm:ms-6 flex-1 justify-center px-4">
+                <livewire:movies.search />
+            </div>
+
             <div class="hidden sm:flex sm:items-center sm:ms-6">
+
+                <div class="mr-4">
+                    <x-theme-toggle />
+                </div>
+
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ms-3 relative">
@@ -74,10 +83,8 @@
                     </div>
                 @endif
 
-                <div class="hidden sm:flex sm:items-center sm:ms-6 flex-1 justify-center px-4">
-                    <livewire:movies.search />
-                </div>
-                
+
+
                 <!-- Settings Dropdown -->
                 <div class="ms-3 relative">
                     <x-dropdown align="right" width="48">
