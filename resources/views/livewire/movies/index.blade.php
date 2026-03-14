@@ -31,22 +31,22 @@
     <div
         class="flex flex-col md:flex-row justify-between items-center bg-surface p-2 rounded-lg border border-gray-800 mb-8 gap-4">
 
-        <div class="flex space-x-2 w-full md:w-auto overflow-x-auto custom-scrollbar">
+        <div class="flex space-x-2 w-full md:w-auto overflow-x-auto custom-scrollbar pb-2">
             <button wire:click="setFilter('watched')"
                 class="flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors whitespace-nowrap
-                {{ $filterStatus === 'watched' ? 'bg-primary text-gray-900' : 'text-textMuted hover:text-text hover:bg-gray-800' }}">
+                {{ $filterStatus === 'watched' ? 'bg-primary text-gray-900' : 'text-textMuted hover:text-text hover:bg-gray-200 dark:hover:bg-gray-800' }}">
                 <span class="mr-2">✅</span> Assistidos
             </button>
 
             <button wire:click="setFilter('watchlist')"
                 class="flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors whitespace-nowrap
-                {{ $filterStatus === 'watchlist' ? 'bg-primary text-gray-900' : 'text-textMuted hover:text-text hover:bg-gray-800' }}">
+                {{ $filterStatus === 'watchlist' ? 'bg-primary text-gray-900' : 'text-textMuted hover:text-text hover:bg-gray-200 dark:hover:bg-gray-800' }}">
                 <span class="mr-2">📋</span> Watchlist
             </button>
 
             <button wire:click="setFilter('favorites')"
                 class="flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors whitespace-nowrap
-                {{ $filterStatus === 'favorites' ? 'bg-primary text-gray-900' : 'text-textMuted hover:text-text hover:bg-gray-800' }}">
+                {{ $filterStatus === 'favorites' ? 'bg-primary text-gray-900' : 'text-textMuted hover:text-text hover:bg-gray-200 dark:hover:bg-gray-800' }}">
                 <span class="mr-2">❤️</span> Favoritos
             </button>
         </div>
