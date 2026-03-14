@@ -66,4 +66,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Relação: Um usuário tem muitos filmes na tabela user_movies
+    public function movies()
+    {
+        return $this->hasMany(UserMovie::class);
+    }
 }
