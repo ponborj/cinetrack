@@ -26,3 +26,29 @@
         @apply bg-background text-text transition-colors duration-300;
     }
 }
+
+/* Estilização elegante da barra de rolagem para o nosso CineTrack */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px; /* Altura da barra horizontal */
+    width: 8px; /* Largura da barra vertical (se houver) */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* Fundo transparente para não poluir o design */
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-text-muted); /* Cor cinza neutra por padrão */
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary); /* Fica dourado ao passar o mouse! */
+}
+
+/* Para o Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-text-muted) transparent;
+}

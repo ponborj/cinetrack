@@ -11,10 +11,8 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    // dashboard    
-    Route::get('/dashboard', function () {
-        return 'dashboard';
-    })->name('dashboard');
+    // A rota Home, redireciona para /movies  
+    Route::redirect('/', '/movies')->name('home');
 
     // A rota principal com as estatísticas
     Route::get('/movies', App\Livewire\Movies\Index::class)->name('movies.index');
