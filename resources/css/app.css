@@ -5,3 +5,24 @@
 [x-cloak] {
     display: none;
 }
+
+@layer base {
+    :root {
+        --color-bg: #f3f4f6; /* Fundo claro padrão */
+        --color-surface: #ffffff;
+        --color-text: #1f2937;
+        --color-text-muted: #6b7280;
+    }
+
+    /* Quando a tag <html> tiver a classe 'dark', estas cores assumem */
+    .dark {
+        --color-bg: #0a0a0f; /* O fundo escuro que você pediu */
+        --color-surface: #1a1a24; /* Fundo de cards um pouco mais claro que o bg */
+        --color-text: #f9fafb;
+        --color-text-muted: #9ca3af;
+    }
+
+    body {
+        @apply bg-background text-text transition-colors duration-300;
+    }
+}
